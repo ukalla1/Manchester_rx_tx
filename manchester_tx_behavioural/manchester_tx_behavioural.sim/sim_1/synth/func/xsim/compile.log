@@ -1,0 +1,7 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/synth/func/xsim/manchester_tx_top_tb_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_tx_m
+INFO: [VRFC 10-311] analyzing module manchester_tx_top
+INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_tx_top_tb

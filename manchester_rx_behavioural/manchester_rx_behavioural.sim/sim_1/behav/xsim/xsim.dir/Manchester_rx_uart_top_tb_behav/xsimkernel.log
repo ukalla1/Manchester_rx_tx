@@ -1,0 +1,4 @@
+Running: xsim.dir/Manchester_rx_uart_top_tb_behav/xsimk -simmode gui -wdb Manchester_rx_uart_top_tb_behav.wdb -simrunnum 0 -socket 40331
+Design successfully loaded
+Design Loading Memory Usage: 33140 KB (Peak: 33260 KB)
+Design Loading CPU Usage: 10 ms
