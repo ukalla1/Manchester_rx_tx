@@ -1,9 +1,16 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/impl/timing/xsim/manchester_rx_top_tb_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/impl/timing/xsim/Manchester_rx_uart_top_tb_time_impl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module RAM32M_UNIQ_BASE_
-INFO: [VRFC 10-311] analyzing module RAM32M_HD5
+INFO: [VRFC 10-311] analyzing module RAM32M_HD3
+INFO: [VRFC 10-311] analyzing module Manchester_rx_uart_top
 INFO: [VRFC 10-311] analyzing module manchester_rx_m
 INFO: [VRFC 10-311] analyzing module manchester_rx_top
 INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
+INFO: [VRFC 10-311] analyzing module uart_tx_wrapper
+INFO: [VRFC 10-311] analyzing module uart_txm_ex
 INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_rx_m_tb
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module manchester_rx_top_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/Manchester_rx_uart_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Manchester_rx_uart_top_tb

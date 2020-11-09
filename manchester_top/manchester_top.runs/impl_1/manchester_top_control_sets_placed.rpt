@@ -1,0 +1,88 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Mon Nov  9 10:12:50 2020
+| Host         : ukallakuri-Lenovo-YOGA-910-13IKB running 64-bit Ubuntu 20.04.1 LTS
+| Command      : report_control_sets -verbose -file manchester_top_control_sets_placed.rpt
+| Design       : manchester_top
+| Device       : xc7a100t
+-------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    20 |
+| Unused register locations in slices containing registers |    62 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            5 |
+|      4 |            4 |
+|      8 |            7 |
+|     14 |            1 |
+|    16+ |            3 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               8 |            2 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              28 |            9 |
+| Yes          | No                    | No                     |              16 |            4 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              62 |           17 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+-----------------------------------------+--------------------------------+------------------+----------------+
+|    Clock Signal    |              Enable Signal              |        Set/Reset Signal        | Slice Load Count | Bel Load Count |
++--------------------+-----------------------------------------+--------------------------------+------------------+----------------+
+|  clk100M_IBUF_BUFG | RXM/rx_top/rxm/sample_5_15              | rst_IBUF                       |                1 |              1 |
+|  clk100M_IBUF_BUFG | RXM/rx_top/rxm/en_i_1_n_0               | rst_IBUF                       |                1 |              1 |
+|  clk100M_IBUF_BUFG | RXM/uart_tx/tx/tx_serial_data_internal  | rst_IBUF                       |                1 |              1 |
+|  clk20M_IBUF_BUFG  | TXM/tx_m/FSM_sequential_state_reg[2]_0  | rst_IBUF                       |                1 |              1 |
+|  clk20M_IBUF_BUFG  |                                         | TXM/tx_m/sample_cnt            |                1 |              1 |
+|  clk100M_IBUF_BUFG |                                         | RXM/rx_top/rxm/cntr[3]_i_1_n_0 |                1 |              4 |
+|  clk100M_IBUF_BUFG |                                         |                                |                1 |              4 |
+|  clk20M_IBUF_BUFG  | TXM/tx_m/E[0]                           | rst_IBUF                       |                1 |              4 |
+|  clk20M_IBUF_BUFG  |                                         | rst_IBUF                       |                1 |              4 |
+|  clk20M_IBUF_BUFG  | TXM/tx_in[7]_i_1_n_0                    | rst_IBUF                       |                1 |              8 |
+|  clk20M_IBUF_BUFG  | TXM/tx_m/bit_cnt_reg[2]_0[0]            |                                |                2 |              8 |
+|  clk100M_IBUF_BUFG | RXM/uart_tx/tx/tx_shift_reg_1           | rst_IBUF                       |                1 |              8 |
+|  clk100M_IBUF_BUFG | RXM/rx_top/rxm/sample_5                 | rst_IBUF                       |                3 |              8 |
+|  clk100M_IBUF_BUFG | RXM/enb                                 |                                |                2 |              8 |
+|  clk100M_IBUF_BUFG | RXM/rx_top/rxm/parallel_dout_internal   | RXM/rx_top/rxm/bit_cnt         |                1 |              8 |
+|  clk100M_IBUF_BUFG | RXM/uart_tx/tx/tx_reg_0                 | rst_IBUF                       |                1 |              8 |
+|  clk100M_IBUF_BUFG | RXM/uart_tx/tx/sample_count[13]_i_1_n_0 | rst_IBUF                       |                5 |             14 |
+|  clk100M_IBUF_BUFG | RXM/rx_top/rxm/data_valid               |                                |                2 |             16 |
+|  clk100M_IBUF_BUFG |                                         | rst_IBUF                       |                6 |             19 |
+|  clk20M_IBUF_BUFG  |                                         |                                |                3 |             20 |
++--------------------+-----------------------------------------+--------------------------------+------------------+----------------+
+
+

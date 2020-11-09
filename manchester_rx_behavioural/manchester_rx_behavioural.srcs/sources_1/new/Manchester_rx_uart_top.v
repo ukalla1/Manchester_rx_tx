@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Uttej
 // 
 // Create Date: 10/30/2020 09:55:49 PM
 // Design Name: 
@@ -22,13 +22,12 @@
 `include "parameters.vh"
 
 module Manchester_rx_uart_top (
-//    input clk_pin_n,
-//    input clk_pin_p,
     input clk,
     input rst,
     input manch_decode_input,
     input tx_on,
-    output tx_serial_data
+    output tx_serial_data,
+    output rx_ready
     );
 
     localparam RAM_ADDRSWIDTH = clogb2(`RAM_DEPTH-1);
@@ -41,20 +40,11 @@ module Manchester_rx_uart_top (
     
     wire [`DATAWIDTH-1:0]tx_parallel_data;
     
-    reg [3:0] cntr;
-    
     reg [2:0] state;
     
     reg enb;
     
     reg [RAM_ADDRSWIDTH-1:0] ram_addrb;
-    
-    //wire clk;
-    
-    //design_2 design_2_i
-    //   (.clk(clk),
-    //    .clk_pin_n(clk_pin_n),
-    //    .clk_pin_p(clk_pin_p));
     
     manchester_rx_top #(
         .RAM_ADDRSWIDTH(RAM_ADDRSWIDTH)
@@ -64,7 +54,8 @@ module Manchester_rx_uart_top (
         .enb(enb),
         .serial_din(manch_decode_input),
         .ram_addrb(ram_addrb),
-        .parallel_dout(tx_parallel_data)
+        .parallel_dout(tx_parallel_data),
+        .rx_ready(rx_ready)
         );
         
     uart_tx_wrapper #(
@@ -86,13 +77,13 @@ module Manchester_rx_uart_top (
             enb <= 1'b0;
             ram_addrb <= {RAM_ADDRSWIDTH{1'b0}};
             tx_data_load <= 1'b0;
-            cntr <= 0;
+//            cntr <= 0;
         //                tx_data_load_delayed <= tx_data_load;
         end
         else begin
             case(state)
                 idle: begin
-                    cntr <= 0;
+//                    cntr <= 0;
                     if(tx_on) begin
                         if(tx_ready) begin
                             enb <= 1'b1;
@@ -117,13 +108,15 @@ module Manchester_rx_uart_top (
                 
                 tx_idle: begin
                     tx_data_load <= 1'b0;
-                    if(cntr < 4'b1000) begin
-                        cntr <= cntr + 1'b1;
-                    end
-                    else begin
-                        state <= tx_data;
-                        cntr <= 0;
-                    end
+                    state <= tx_data;
+//                    if(cntr < 4'b1000) begin
+//                        cntr <= cntr + 1'b1;
+//                        state <= tx_idle;
+//                    end
+//                    else begin
+//                        state <= tx_data;
+//                        cntr <= 0;
+//                    end
                 end
                 
                 tx_data: begin

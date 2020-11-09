@@ -10,9 +10,8 @@ Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,ADDR...
 Compiling module xil_defaultlib.manchester_rx_m
 Compiling module xil_defaultlib.manchester_rx_top
-Compiling module xil_defaultlib.ff
 Compiling module xil_defaultlib.uart_txm_ex(BITCOUNTMAX=8,SAMPLE...
-Compiling module xil_defaultlib.uart_tx_wrapper(BITCOUNTMAX=8)
+Compiling module xil_defaultlib.uart_tx_wrapper(BITCOUNTMAX=8,SA...
 Compiling module xil_defaultlib.Manchester_rx_uart_top
 Compiling module xil_defaultlib.Manchester_rx_uart_top_tb
 Compiling module xil_defaultlib.glbl

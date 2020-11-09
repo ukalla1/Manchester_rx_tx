@@ -29,7 +29,8 @@ module manchester_rx_top #(
     input enb,
     input serial_din,
     input [RAM_ADDRSWIDTH-1:0] ram_addrb,
-    output [`DATAWIDTH-1:0] parallel_dout
+    output [`DATAWIDTH-1:0] parallel_dout,
+    output rx_ready
     );
     
     wire data_valid;
@@ -57,7 +58,8 @@ module manchester_rx_top #(
         .rst(rst),
         .serial_din(serial_din),
         .data_valid(data_valid),
-        .parallel_dout(parallel_dout_rx)
+        .parallel_dout(parallel_dout_rx),
+        .rx_ready(rx_ready)
     );
     
     always @(posedge clk) begin

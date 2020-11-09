@@ -26,7 +26,8 @@ module manchester_rx_m(
     input rst,
     input serial_din,
     output reg data_valid,
-    output [`DATAWIDTH-1:0] parallel_dout
+    output [`DATAWIDTH-1:0] parallel_dout,
+    output rx_ready
     );
     
     wire sample_5, sample_5_15;
@@ -46,6 +47,8 @@ module manchester_rx_m(
     assign sample_5_15 = ((cntr == 5'b00011) || (cntr == 5'b01000)) ? 1'b1 : 1'b0;
     
     assign parallel_dout = parallel_dout_internal;
+    
+    assign rx_ready = ~en;
     
     always @(posedge clk) begin
         if(rst) begin

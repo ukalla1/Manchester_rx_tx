@@ -2,685 +2,131 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Nov  3 17:17:01 2020
-# Process ID: 2965
+# Start of session at: Thu Nov  5 21:42:36 2020
+# Process ID: 347859
 # Current directory: /home/ukallakuri/hardware_design/designs/manchester_tx_rx
 # Command line: vivado
 # Log file: /home/ukallakuri/hardware_design/designs/manchester_tx_rx/vivado.log
 # Journal file: /home/ukallakuri/hardware_design/designs/manchester_tx_rx/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.xpr
+open_project /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.xpr
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
-open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 6331.473 ; gain = 95.320 ; free physical = 3923 ; free virtual = 7888
 update_compile_order -fileset sources_1
-reset_run impl_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Attempt to kill process failed
-
-close [ open /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v w ]
-add_files /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v
-update_compile_order -fileset sources_1
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v w ]
-add_files -fileset sim_1 /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v
-update_compile_order -fileset sim_1
-set_property top manchester_rx_m_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-update_compile_order -fileset sim_1
 launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_m_tb' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim/data.mem'
+INFO: [SIM-utils-54] Inspecting design source files for 'manchester_top_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim/data.mem'
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_m_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 406dea0543924cd9a0e2ad05d51230f4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_m_tb_behav xil_defaultlib.manchester_rx_m_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'parallel_dout' [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v:42]
-WARNING: [VRFC 10-3283] element index 4 into 'shift_reg_0Comp' is out of bounds [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:92]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_m_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_m_tb_behav
-
-****** Webtalk v2018.3 (64-bit)
-  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
-  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-source /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim/xsim.dir/manchester_rx_m_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Tue Nov  3 20:36:36 2020...
-INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "manchester_rx_m_tb_behav -key {Behavioral:sim_1:Functional:manchester_rx_m_tb} -tclbatch {manchester_rx_m_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-source manchester_rx_m_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-$finish called at time : 320 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" Line 100
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'manchester_rx_m_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 6708.922 ; gain = 72.156 ; free physical = 631 ; free virtual = 5640
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_m_tb' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim/data.mem'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_m_tb_vlog.prj
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 406dea0543924cd9a0e2ad05d51230f4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_m_tb_behav xil_defaultlib.manchester_rx_m_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'parallel_dout' [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v:42]
-WARNING: [VRFC 10-3283] element index 4 into 'shift_reg_0Comp' is out of bounds [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:92]
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-$finish called at time : 320 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" Line 100
-relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 6708.922 ; gain = 0.000 ; free physical = 666 ; free virtual = 5666
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_m_tb' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim/data.mem'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_m_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-ERROR: [VRFC 10-1412] syntax error near always [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:50]
-ERROR: [VRFC 10-2790] Verilog 2000 keyword always used in incorrect context [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:50]
-ERROR: [VRFC 10-1412] syntax error near <= [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:62]
-ERROR: [VRFC 10-1412] syntax error near <= [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:65]
-ERROR: [VRFC 10-1412] syntax error near <= [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:68]
-ERROR: [VRFC 10-1412] syntax error near <= [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:74]
-ERROR: [VRFC 10-1412] syntax error near <= [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:77]
-ERROR: [VRFC 10-1412] syntax error near <= [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:81]
-ERROR: [VRFC 10-1412] syntax error near <= [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:86]
-ERROR: [VRFC 10-1412] syntax error near <= [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:89]
-ERROR: [VRFC 10-1412] syntax error near <= [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:94]
-ERROR: [VRFC 10-1412] syntax error near <= [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:97]
-ERROR: [VRFC 10-1412] syntax error near <= [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:101]
-ERROR: [VRFC 10-1412] syntax error near <= [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:107]
-ERROR: [VRFC 10-1412] syntax error near <= [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:110]
-ERROR: [VRFC 10-1412] syntax error near <= [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:116]
-ERROR: [VRFC 10-1412] syntax error near end [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:123]
-ERROR: [VRFC 10-2790] Verilog 2000 keyword end used in incorrect context [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:123]
-ERROR: [VRFC 10-2939] 'cntr' is an unknown type [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v:53]
-INFO: [#UNDEF] Sorry, too many errors..
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim/xvlog.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim/xvlog.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-export_ip_user_files -of_objects  [get_files /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v] -no_script -reset -force -quiet
-remove_files  /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v
-file delete -force /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_rx_m.v
-export_ip_user_files -of_objects  [get_files /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v
-file delete -force /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v
-update_compile_order -fileset sim_1
-set_property source_mgmt_mode DisplayOnly [current_project]
-close_project
-create_project manchester_rx_behavioural /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural -part xc7a100tcsg324-1
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
-file mkdir /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new
-close [ open /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v w ]
-add_files /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v
-update_compile_order -fileset sources_1
-close [ open /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/parameters.vh w ]
-add_files /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/parameters.vh
-update_compile_order -fileset sources_1
-file mkdir /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v w ]
-add_files -fileset sim_1 /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v
-update_compile_order -fileset sim_1
-update_compile_order -fileset sim_1
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_m_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_m_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_m_tb_behav xil_defaultlib.manchester_rx_m_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-3283] element index 4 into 'shift_reg_0Comp' is out of bounds [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v:94]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_m_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_m_tb_behav
-
-****** Webtalk v2018.3 (64-bit)
-  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
-  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-source /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim/xsim.dir/manchester_rx_m_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Tue Nov  3 20:48:21 2020...
-INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "manchester_rx_m_tb_behav -key {Behavioral:sim_1:Functional:manchester_rx_m_tb} -tclbatch {manchester_rx_m_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-source manchester_rx_m_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'manchester_rx_m_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 6749.125 ; gain = 0.000 ; free physical = 435 ; free virtual = 5511
-run all
-$finish called at time : 1360 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" Line 100
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_m_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_m_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_m_tb_behav xil_defaultlib.manchester_rx_m_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-3283] element index 4 into 'shift_reg_0Comp' is out of bounds [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v:94]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_m_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_m_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 6749.125 ; gain = 0.000 ; free physical = 468 ; free virtual = 5536
-run all
-$finish called at time : 1360 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" Line 103
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_m_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_m_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_m_tb_behav xil_defaultlib.manchester_rx_m_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-3283] element index 4 into 'shift_reg_0Comp' is out of bounds [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v:94]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_m_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_m_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 2160 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" Line 91
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_m_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_m_tb_vlog.prj
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_m_tb_behav xil_defaultlib.manchester_rx_m_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-3283] element index 4 into 'shift_reg_0Comp' is out of bounds [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v:94]
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 2160 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" Line 91
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_m_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_m_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_m_tb_behav xil_defaultlib.manchester_rx_m_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_m_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_m_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 2160 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" Line 91
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_m_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_m_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_m_tb_behav xil_defaultlib.manchester_rx_m_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_m_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_m_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 2160 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" Line 91
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_m_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_m_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_m_tb_behav xil_defaultlib.manchester_rx_m_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_m_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_m_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 2160 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" Line 91
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_m_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_m_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_m_tb_behav xil_defaultlib.manchester_rx_m_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_m_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_m_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 2160 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" Line 91
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_m_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_m_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_m_tb_behav xil_defaultlib.manchester_rx_m_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_m_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_m_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 4320 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" Line 89
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_m_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_m_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m_tb
-INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_m_tb_behav xil_defaultlib.manchester_rx_m_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_m_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_m_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 4320 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" Line 89
-save_wave_config {/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_m_tb_behav.wcfg}
-add_files -fileset sim_1 -norecurse /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_m_tb_behav.wcfg
-set_property xsim.view /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_m_tb_behav.wcfg [get_filesets sim_1]
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-close [ open /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_top.v w ]
-add_files /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_top.v
-update_compile_order -fileset sources_1
-add_files -norecurse /home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v w ]
-add_files -fileset sim_1 /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v
-update_compile_order -fileset sim_1
-set_property top manchester_rx_top_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-update_compile_order -fileset sim_1
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_top_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_top_tb_vlog.prj
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj manchester_top_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/Manchester_rx_uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Manchester_rx_uart_top
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module manchester_rx_m
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module manchester_rx_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/sources_1/new/manchester_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_m.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_tx_m
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_tx_top
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/uart_tx_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/uart_txm_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_txm_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/sim_1/new/manchester_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_top_tb
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim'
 Vivado Simulator 2018.3
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_top_tb_behav xil_defaultlib.manchester_rx_top_tb xil_defaultlib.glbl -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto fc1d1eca286b4b7dae1b8c9949dd8041 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_top_tb_behav xil_defaultlib.manchester_top_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
-ERROR: [VRFC 10-3180] cannot find port 'parallel_out' on this module [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:47]
-WARNING: [VRFC 10-2861] module 'manchester_rx_top' does not have a parameter named ADDRS_WIDTH [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:40]
+WARNING: [VRFC 10-3633] port 'uart_serial_out' is already connected [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/sim_1/new/manchester_top_tb.v:44]
+ERROR: [VRFC 10-3633] port 'uart_serial_out' is already connected [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/sim_1/new/manchester_top_tb.v:55]
 ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+INFO: [USF-XSim-99] Step results log file:'/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim/elaborate.log' file for more information.
 ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
 ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
 launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_top_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'manchester_top_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim/data.mem'
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_top_tb_vlog.prj
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj manchester_top_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/Manchester_rx_uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Manchester_rx_uart_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_rx_m
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module manchester_rx_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/sources_1/new/manchester_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_m.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_tx_m
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_tx_top
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/uart_tx_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/uart_txm_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_txm_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/sim_1/new/manchester_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_top_tb
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim'
 Vivado Simulator 2018.3
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_top_tb_behav xil_defaultlib.manchester_rx_top_tb xil_defaultlib.glbl -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto fc1d1eca286b4b7dae1b8c9949dd8041 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_top_tb_behav xil_defaultlib.manchester_top_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-2861] module 'manchester_rx_top' does not have a parameter named ADDRS_WIDTH [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:40]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'ram_addrb' [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:45]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,INIT...
+Compiling module xil_defaultlib.manchester_tx_m
+Compiling module xil_defaultlib.manchester_tx_top
 Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,ADDR...
 Compiling module xil_defaultlib.manchester_rx_m
 Compiling module xil_defaultlib.manchester_rx_top
-Compiling module xil_defaultlib.manchester_rx_top_tb
+Compiling module xil_defaultlib.uart_txm_ex(BITCOUNTMAX=8,SAMPLE...
+Compiling module xil_defaultlib.uart_tx_wrapper(BITCOUNTMAX=8,SA...
+Compiling module xil_defaultlib.Manchester_rx_uart_top
+Compiling module xil_defaultlib.manchester_top
+Compiling module xil_defaultlib.manchester_top_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_top_tb_behav
-
-****** Webtalk v2018.3 (64-bit)
-  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
-  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-source /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim/xsim.dir/manchester_rx_top_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Tue Nov  3 22:59:58 2020...
-INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Built simulation snapshot manchester_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "manchester_rx_top_tb_behav -key {Behavioral:sim_1:Functional:manchester_rx_top_tb} -tclbatch {manchester_rx_top_tb.tcl} -view {/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_m_tb_behav.wcfg} -log {simulate.log}"
+   with args "manchester_top_tb_behav -key {Behavioral:sim_1:Functional:manchester_top_tb} -tclbatch {manchester_top_tb.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2018.3
 Time resolution is 1 ps
-open_wave_config /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_m_tb_behav.wcfg
-WARNING: Simulation object /manchester_rx_m_tb/clk was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/rst was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/serial_din was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/data_valid was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/parallel_dout was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/data_valid was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/sample_5 was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/sample_5_15 was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/cntr was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/shift_reg_0Comp was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/bit_cnt was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/en was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/rx_shift_reg was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/parallel_dout_internal was not found in the design.
-source manchester_rx_top_tb.tcl
+source manchester_top_tb.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -691,977 +137,155 @@ source manchester_rx_top_tb.tcl
 #   }
 # }
 # run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'manchester_rx_top_tb_behav' loaded.
+WARNING: Too many words specified in data file data.mem
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'manchester_top_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 6971.047 ; gain = 49.836 ; free physical = 590 ; free virtual = 5476
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 6506.434 ; gain = 68.047 ; free physical = 1400 ; free virtual = 4302
 relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_top_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'manchester_top_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim/data.mem'
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_top_tb_vlog.prj
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj manchester_top_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/Manchester_rx_uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Manchester_rx_uart_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_rx_m
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_rx_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/sources_1/new/manchester_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_m.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_tx_m
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_tx_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/uart_tx_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/uart_txm_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_txm_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/sim_1/new/manchester_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_top_tb
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim'
 Vivado Simulator 2018.3
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_top_tb_behav xil_defaultlib.manchester_rx_top_tb xil_defaultlib.glbl -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto fc1d1eca286b4b7dae1b8c9949dd8041 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_top_tb_behav xil_defaultlib.manchester_top_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-2861] module 'manchester_rx_top' does not have a parameter named ADDRS_WIDTH [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:40]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'ram_addrb' [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:45]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,INIT...
+Compiling module xil_defaultlib.manchester_tx_m
+Compiling module xil_defaultlib.manchester_tx_top
+Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,ADDR...
+Compiling module xil_defaultlib.manchester_rx_m
+Compiling module xil_defaultlib.manchester_rx_top
+Compiling module xil_defaultlib.uart_txm_ex(BITCOUNTMAX=8,SAMPLE...
+Compiling module xil_defaultlib.uart_tx_wrapper(BITCOUNTMAX=8,SA...
+Compiling module xil_defaultlib.Manchester_rx_uart_top
+Compiling module xil_defaultlib.manchester_top
+Compiling module xil_defaultlib.manchester_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot manchester_top_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 Vivado Simulator 2018.3
 Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 6971.047 ; gain = 0.000 ; free physical = 609 ; free virtual = 5472
+WARNING: Too many words specified in data file data.mem
 run all
-$finish called at time : 15520 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" Line 94
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_top_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_top_tb_vlog.prj
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_top_tb_behav xil_defaultlib.manchester_rx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-2861] module 'manchester_rx_top' does not have a parameter named ADDRS_WIDTH [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:40]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'ram_addrb' [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:45]
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 15520 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" Line 94
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_top_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_top_tb_behav xil_defaultlib.manchester_rx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-2861] module 'manchester_rx_top' does not have a parameter named ADDRS_WIDTH [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:40]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'ram_addrb' [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:45]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,ADDR...
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_top
-Compiling module xil_defaultlib.manchester_rx_top_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_top_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 15520 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" Line 94
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_top_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_top_tb_behav xil_defaultlib.manchester_rx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-2861] module 'manchester_rx_top' does not have a parameter named ADDRS_WIDTH [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:40]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'ram_addrb' [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:45]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,ADDR...
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_top
-Compiling module xil_defaultlib.manchester_rx_top_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_top_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 15520 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" Line 94
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_top_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_top_tb_behav xil_defaultlib.manchester_rx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-2861] module 'manchester_rx_top' does not have a parameter named ADDRS_WIDTH [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:40]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'ram_addrb' [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:45]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=9,ADDR...
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_top
-Compiling module xil_defaultlib.manchester_rx_top_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_top_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 15520 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" Line 94
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_top_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_top_tb_behav xil_defaultlib.manchester_rx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-2861] module 'manchester_rx_top' does not have a parameter named ADDRS_WIDTH [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:40]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'ram_addrb' [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:45]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,ADDR...
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_top
-Compiling module xil_defaultlib.manchester_rx_top_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_top_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 12320 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" Line 94
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_top_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_top_tb_behav xil_defaultlib.manchester_rx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-2861] module 'manchester_rx_top' does not have a parameter named ADDRS_WIDTH [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:40]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'ram_addrb' [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:45]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,ADDR...
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_top
-Compiling module xil_defaultlib.manchester_rx_top_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_top_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 13920 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" Line 94
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_top_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top_tb
-ERROR: [VRFC 10-1412] syntax error near # [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:101]
-ERROR: [VRFC 10-2865] module 'manchester_rx_top_tb' ignored due to previous errors [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:24]
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim/xvlog.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim/xvlog.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_top_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_top_tb_behav xil_defaultlib.manchester_rx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-2861] module 'manchester_rx_top' does not have a parameter named ADDRS_WIDTH [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:40]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'ram_addrb' [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:45]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,ADDR...
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_top
-Compiling module xil_defaultlib.manchester_rx_top_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_top_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 14990 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" Line 102
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_top_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_top_tb_vlog.prj
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_top_tb_behav xil_defaultlib.manchester_rx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-2861] module 'manchester_rx_top' does not have a parameter named ADDRS_WIDTH [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:40]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'ram_addrb' [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:45]
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 14990 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" Line 102
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_top_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_top_tb_behav xil_defaultlib.manchester_rx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-2861] module 'manchester_rx_top' does not have a parameter named ADDRS_WIDTH [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:40]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,ADDR...
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_top
-Compiling module xil_defaultlib.manchester_rx_top_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_top_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 14990 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" Line 102
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_top_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_rx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/manchester_rx_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_rx_top_tb_behav xil_defaultlib.manchester_rx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-2861] module 'manchester_rx_top' does not have a parameter named ADDRS_WIDTH [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v:40]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,ADDR...
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_top
-Compiling module xil_defaultlib.manchester_rx_top_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_top_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-run all
-$finish called at time : 15 us : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" Line 102
+$finish called at time : 16684100 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/sim_1/new/manchester_top_tb.v" Line 113
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
-launch_runs synth_1 -jobs 2
-[Tue Nov  3 23:15:35 2020] Launched synth_1...
-Run output will be captured here: /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.runs/synth_1/runme.log
-launch_simulation -mode post-synthesis -type functional
-INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/synth/func/xsim'
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'manchester_top_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim/data.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj manchester_top_tb_vlog.prj
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto fc1d1eca286b4b7dae1b8c9949dd8041 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_top_tb_behav xil_defaultlib.manchester_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "manchester_top_tb_behav -key {Behavioral:sim_1:Functional:manchester_top_tb} -tclbatch {manchester_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source manchester_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Too many words specified in data file data.mem
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'manchester_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run all
+$finish called at time : 16684100 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/sim_1/new/manchester_top_tb.v" Line 113
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+open_run synth_1 -name synth_1
 Design is defaulting to impl run constrset: constrs_1
 Design is defaulting to synth run part: xc7a100tcsg324-1
-INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2018.3
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7253.809 ; gain = 0.000 ; free physical = 405 ; free virtual = 5227
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 6675.566 ; gain = 0.000 ; free physical = 123 ; free virtual = 3869
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 2 instances
+  A total of 5 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 4 instances
 
-open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 7391.984 ; gain = 284.117 ; free physical = 321 ; free virtual = 5146
-INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
-INFO: [SIM-utils-25] write_verilog -mode funcsim -nolib -force -file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/synth/func/xsim/manchester_rx_top_tb_func_synth.v"
-INFO: [SIM-utils-36] Netlist generated:/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/synth/func/xsim/manchester_rx_top_tb_func_synth.v
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_top_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/synth/func/xsim'
-xvlog --incr --relax -prj manchester_rx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/synth/func/xsim/manchester_rx_top_tb_func_synth.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-311] analyzing module manchester_rx_top
-INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/synth/func/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot manchester_rx_top_tb_func_synth xil_defaultlib.manchester_rx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module unisims_ver.BUFG
-Compiling module unisims_ver.IBUF
-Compiling module unisims_ver.OBUF
-Compiling module unisims_ver.FDRE_default
-Compiling module unisims_ver.RAM32M
-Compiling module xil_defaultlib.ram_dp__sim_par
-Compiling module unisims_ver.LUT4
-Compiling module unisims_ver.LUT5
-Compiling module unisims_ver.LUT6
-Compiling module unisims_ver.x_lut1_mux2
-Compiling module unisims_ver.LUT1
-Compiling module unisims_ver.x_lut2_mux4
-Compiling module unisims_ver.LUT2
-Compiling module unisims_ver.x_lut3_mux8
-Compiling module unisims_ver.LUT3
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_top
-Compiling module xil_defaultlib.manchester_rx_top_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_top_tb_func_synth
-
-****** Webtalk v2018.3 (64-bit)
-  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
-  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-source /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/synth/func/xsim/xsim.dir/manchester_rx_top_tb_func_synth/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Tue Nov  3 23:16:24 2020...
-INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/synth/func/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "manchester_rx_top_tb_func_synth -key {Post-Synthesis:sim_1:Functional:manchester_rx_top_tb} -tclbatch {manchester_rx_top_tb.tcl} -view {/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_m_tb_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-open_wave_config /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_m_tb_behav.wcfg
-WARNING: Simulation object /manchester_rx_m_tb/clk was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/rst was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/serial_din was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/data_valid was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/parallel_dout was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/data_valid was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/sample_5 was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/sample_5_15 was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/cntr was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/shift_reg_0Comp was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/bit_cnt was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/en was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/rx_shift_reg was not found in the design.
-WARNING: Simulation object /manchester_rx_m_tb/uut/parallel_dout_internal was not found in the design.
-source manchester_rx_top_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-xsim: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 7498.191 ; gain = 69.996 ; free physical = 157 ; free virtual = 5017
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'manchester_rx_top_tb_func_synth' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:37 ; elapsed = 00:00:21 . Memory (MB): peak = 7498.191 ; gain = 390.324 ; free physical = 155 ; free virtual = 5015
-relaunch_sim
-INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/synth/func/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
-INFO: [SIM-utils-25] write_verilog -mode funcsim -nolib -force -file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/synth/func/xsim/manchester_rx_top_tb_func_synth.v"
-INFO: [SIM-utils-36] Netlist generated:/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/synth/func/xsim/manchester_rx_top_tb_func_synth.v
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_rx_top_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/synth/func/xsim'
-xvlog --incr --relax -prj manchester_rx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/synth/func/xsim/manchester_rx_top_tb_func_synth.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_m
-INFO: [VRFC 10-311] analyzing module manchester_rx_top
-INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_rx_top_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/synth/func/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.sim/sim_1/synth/func/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 1037b4cf2b634a8c812530e0a65b902f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot manchester_rx_top_tb_func_synth xil_defaultlib.manchester_rx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module unisims_ver.BUFG
-Compiling module unisims_ver.IBUF
-Compiling module unisims_ver.OBUF
-Compiling module unisims_ver.FDRE_default
-Compiling module unisims_ver.RAM32M
-Compiling module xil_defaultlib.ram_dp__sim_par
-Compiling module unisims_ver.LUT4
-Compiling module unisims_ver.LUT5
-Compiling module unisims_ver.LUT6
-Compiling module unisims_ver.x_lut1_mux2
-Compiling module unisims_ver.LUT1
-Compiling module unisims_ver.x_lut2_mux4
-Compiling module unisims_ver.LUT2
-Compiling module unisims_ver.x_lut3_mux8
-Compiling module unisims_ver.LUT3
-Compiling module xil_defaultlib.manchester_rx_m
-Compiling module xil_defaultlib.manchester_rx_top
-Compiling module xil_defaultlib.manchester_rx_top_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_rx_top_tb_func_synth
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7794.738 ; gain = 0.000 ; free physical = 165 ; free virtual = 4777
-run all
-$finish called at time : 15 us : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" Line 102
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
+open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 6804.207 ; gain = 282.562 ; free physical = 134 ; free virtual = 3746
+create_clock -period 10.000 -name clk100M -waveform {0.000 5.000} [get_ports clk100M]
+create_clock -period 50.000 -name clk100M -waveform {0.000 25.000} [list [get_ports clk20M] ]
+WARNING: [Constraints 18-619] A clock with name 'clk100M' already exists, overwriting the previous clock with the same name.
+file mkdir /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/constrs_1/new
+close [ open /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/constrs_1/new/tim.xdc w ]
+add_files -fileset constrs_1 /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/constrs_1/new/tim.xdc
+set_property target_constrs_file /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/constrs_1/new/tim.xdc [current_fileset -constrset]
+save_constraints -force
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7191.457 ; gain = 0.000 ; free physical = 144 ; free virtual = 3274
 close_design
-close [ open /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/Manchester_rx_uart_top.v w ]
-add_files /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_rx_behavioural/manchester_rx_behavioural.srcs/sources_1/new/Manchester_rx_uart_top.v
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-add_files -norecurse {/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ff.v /home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/uart_tx_wrapper.v /home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/uart_txm_ex.v}
-update_compile_order -fileset sources_1
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-close_project
-open_project /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.xpr
-Scanning sources...
-Finished scanning sources
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
-set_property top manchester_tx_top_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_tx_top_tb' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim/data.mem'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_tx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_m_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_m_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_top_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 406dea0543924cd9a0e2ad05d51230f4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_tx_top_tb_behav xil_defaultlib.manchester_tx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,INIT...
-Compiling module xil_defaultlib.manchester_tx_m
-Compiling module xil_defaultlib.manchester_tx_top
-Compiling module xil_defaultlib.manchester_tx_top_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_tx_top_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "manchester_tx_top_tb_behav -key {Behavioral:sim_1:Functional:manchester_tx_top_tb} -tclbatch {manchester_tx_top_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-source manchester_tx_top_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-WARNING: Too many words specified in data file data.mem
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'manchester_tx_top_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 7898.910 ; gain = 0.000 ; free physical = 426 ; free virtual = 4050
-run all
-$finish called at time : 18400 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_top_tb.v" Line 65
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_tx_top_tb' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim/data.mem'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_tx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_m_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_m_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_top_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 406dea0543924cd9a0e2ad05d51230f4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_tx_top_tb_behav xil_defaultlib.manchester_tx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,INIT...
-Compiling module xil_defaultlib.manchester_tx_m
-Compiling module xil_defaultlib.manchester_tx_top
-Compiling module xil_defaultlib.manchester_tx_top_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_tx_top_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-WARNING: Too many words specified in data file data.mem
-run all
-$finish called at time : 18400 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_top_tb.v" Line 65
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_tx_top_tb' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim/data.mem'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_tx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_m_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_m_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_top_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 406dea0543924cd9a0e2ad05d51230f4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_tx_top_tb_behav xil_defaultlib.manchester_tx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,INIT...
-Compiling module xil_defaultlib.manchester_tx_m
-Compiling module xil_defaultlib.manchester_tx_top
-Compiling module xil_defaultlib.manchester_tx_top_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_tx_top_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-WARNING: Too many words specified in data file data.mem
-run all
-$finish called at time : 18400 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_top_tb.v" Line 65
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_tx_top_tb' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim/data.mem'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_tx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_m_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_m_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_top_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 406dea0543924cd9a0e2ad05d51230f4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_tx_top_tb_behav xil_defaultlib.manchester_tx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,INIT...
-Compiling module xil_defaultlib.manchester_tx_m
-Compiling module xil_defaultlib.manchester_tx_top
-Compiling module xil_defaultlib.manchester_tx_top_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_tx_top_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-WARNING: Too many words specified in data file data.mem
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_tx_top_tb' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim/data.mem'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_tx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_m_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_m_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_top_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 406dea0543924cd9a0e2ad05d51230f4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_tx_top_tb_behav xil_defaultlib.manchester_tx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,INIT...
-Compiling module xil_defaultlib.manchester_tx_m
-Compiling module xil_defaultlib.manchester_tx_top
-Compiling module xil_defaultlib.manchester_tx_top_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_tx_top_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-WARNING: Too many words specified in data file data.mem
-run all
-$finish called at time : 18400 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_top_tb.v" Line 65
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_tx_top_tb' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim/data.mem'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj manchester_tx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_m.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_m
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/sources_1/new/ram_dp__sim_par.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_m_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_m_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_top_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 406dea0543924cd9a0e2ad05d51230f4 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot manchester_tx_top_tb_behav xil_defaultlib.manchester_tx_top_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ram_dp__sim_par(RAM_DEPTH=8,INIT...
-Compiling module xil_defaultlib.manchester_tx_m
-Compiling module xil_defaultlib.manchester_tx_top
-Compiling module xil_defaultlib.manchester_tx_top_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_tx_top_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-WARNING: Too many words specified in data file data.mem
-run all
-$finish called at time : 18400 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_top_tb.v" Line 65
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
 reset_run synth_1
 launch_runs synth_1 -jobs 2
-[Wed Nov  4 11:18:31 2020] Launched synth_1...
-Run output will be captured here: /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.runs/synth_1/runme.log
-open_run synth_1 -name synth_1
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xc7a100tcsg324-1
-INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2018.3
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7898.910 ; gain = 0.000 ; free physical = 595 ; free virtual = 3862
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 2 instances
-
-create_clock -period 100.000 -name clk -waveform {0.000 50.000} [get_ports clk]
-file mkdir /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/constrs_1/new
-close [ open /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/constrs_1/new/tim.xdc w ]
-add_files -fileset constrs_1 /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/constrs_1/new/tim.xdc
-set_property target_constrs_file /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/constrs_1/new/tim.xdc [current_fileset -constrset]
-save_constraints -force
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7898.910 ; gain = 0.000 ; free physical = 361 ; free virtual = 3628
-save_constraints
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7898.910 ; gain = 0.000 ; free physical = 344 ; free virtual = 3609
-close_design
-reset_run synth_1
+[Mon Nov  9 10:11:52 2020] Launched synth_1...
+Run output will be captured here: /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.runs/synth_1/runme.log
 launch_runs impl_1 -jobs 2
-[Wed Nov  4 11:28:17 2020] Launched synth_1...
-Run output will be captured here: /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.runs/synth_1/runme.log
-[Wed Nov  4 11:28:17 2020] Launched impl_1...
-Run output will be captured here: /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.runs/impl_1/runme.log
+[Mon Nov  9 10:12:24 2020] Launched impl_1...
+Run output will be captured here: /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.runs/impl_1/runme.log
 open_run impl_1
-INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2018.3
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1672,94 +296,101 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 7898.910 ; gain = 0.000 ; free physical = 1009 ; free virtual = 3684
-Restored from archive | CPU: 0.020000 secs | Memory: 0.084251 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 7898.910 ; gain = 0.000 ; free physical = 1009 ; free virtual = 3684
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7898.910 ; gain = 0.000 ; free physical = 1010 ; free virtual = 3685
+Read XDEF File: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 7238.617 ; gain = 0.000 ; free physical = 1089 ; free virtual = 3104
+Restored from archive | CPU: 0.020000 secs | Memory: 0.257027 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 7238.617 ; gain = 0.000 ; free physical = 1089 ; free virtual = 3104
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7238.617 ; gain = 0.000 ; free physical = 1090 ; free virtual = 3105
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 2 instances
+  A total of 4 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 4 instances
 
 report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
-launch_simulation -mode post-implementation -type timing
-INFO: [Vivado 12-5682] Launching post-implementation timing simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/impl/timing/xsim'
+launch_simulation -mode post-implementation -type functional
+INFO: [Vivado 12-5682] Launching post-implementation functional simulation in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/impl/func/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
-INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/impl/timing/xsim/manchester_tx_top_tb_time_impl.v"
-INFO: [SIM-utils-34] Writing SDF file...
-INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/impl/timing/xsim/manchester_tx_top_tb_time_impl.sdf"
-INFO: [SIM-utils-36] Netlist generated:/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/impl/timing/xsim/manchester_tx_top_tb_time_impl.v
-INFO: [SIM-utils-37] SDF generated:/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/impl/timing/xsim/manchester_tx_top_tb_time_impl.sdf
-INFO: [SIM-utils-54] Inspecting design source files for 'manchester_tx_top_tb' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/impl/timing/xsim/data.mem'
+INFO: [SIM-utils-32] write_verilog -mode funcsim -nolib -force -file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/impl/func/xsim/manchester_top_tb_func_impl.v"
+INFO: [SIM-utils-36] Netlist generated:/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/impl/func/xsim/manchester_top_tb_func_impl.v
+INFO: [SIM-utils-54] Inspecting design source files for 'manchester_top_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/impl/func/xsim/data.mem'
 INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/impl/timing/xsim'
-xvlog --incr --relax -prj manchester_tx_top_tb_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/impl/timing/xsim/manchester_tx_top_tb_time_impl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RAM32M_UNIQ_BASE_
-INFO: [VRFC 10-311] analyzing module RAM32M_HD3
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/impl/func/xsim'
+xvlog --incr --relax -prj manchester_top_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/impl/func/xsim/manchester_top_tb_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Manchester_rx_uart_top
+INFO: [VRFC 10-311] analyzing module manchester_rx_m
+INFO: [VRFC 10-311] analyzing module manchester_rx_top
+INFO: [VRFC 10-311] analyzing module manchester_top
 INFO: [VRFC 10-311] analyzing module manchester_tx_m
 INFO: [VRFC 10-311] analyzing module manchester_tx_top
 INFO: [VRFC 10-311] analyzing module ram_dp__sim_par
+INFO: [VRFC 10-311] analyzing module ram_dp__sim_par__parameterized0
+INFO: [VRFC 10-311] analyzing module uart_tx_wrapper
+INFO: [VRFC 10-311] analyzing module uart_txm_ex
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_m_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_m_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module manchester_tx_top_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/sim_1/new/manchester_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module manchester_top_tb
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/impl/timing/xsim'
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/impl/func/xsim'
 Vivado Simulator 2018.3
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 406dea0543924cd9a0e2ad05d51230f4 --incr --debug typical --relax --mt 8 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot manchester_tx_top_tb_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.manchester_tx_top_tb xil_defaultlib.glbl -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto fc1d1eca286b4b7dae1b8c9949dd8041 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot manchester_top_tb_func_impl xil_defaultlib.manchester_top_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
-INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "manchester_tx_top_tb_time_impl.sdf", for root module "manchester_tx_top_tb/uut".
-INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "manchester_tx_top_tb_time_impl.sdf", for root module "manchester_tx_top_tb/uut".
 Time Resolution for simulation is 1ps
-Compiling module simprims_ver.LUT4
-Compiling module simprims_ver.FDRE_default
-Compiling module simprims_ver.BUFG
-Compiling module simprims_ver.IBUF
-Compiling module simprims_ver.OBUF
-Compiling module simprims_ver.RAMD32
-Compiling module simprims_ver.RAMS32
-Compiling module xil_defaultlib.RAM32M_UNIQ_BASE_
-Compiling module xil_defaultlib.RAM32M_HD3
-Compiling module simprims_ver.x_lut2_mux4
-Compiling module simprims_ver.LUT2
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.RAM32M
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.ram_dp__sim_par__parameterized0
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.LUT6
+Compiling module xil_defaultlib.manchester_rx_m
+Compiling module xil_defaultlib.manchester_rx_top
+Compiling module unisims_ver.FDSE_default
+Compiling module unisims_ver.CARRY4
+Compiling module xil_defaultlib.uart_txm_ex
+Compiling module xil_defaultlib.uart_tx_wrapper
+Compiling module xil_defaultlib.Manchester_rx_uart_top
+Compiling module unisims_ver.RAM32M(INIT_A=64'b01110010011100...
 Compiling module xil_defaultlib.ram_dp__sim_par
-Compiling module simprims_ver.x_lut3_mux8
-Compiling module simprims_ver.LUT3
-Compiling module simprims_ver.LUT5
-Compiling module simprims_ver.LUT6
 Compiling module xil_defaultlib.manchester_tx_m
 Compiling module xil_defaultlib.manchester_tx_top
-Compiling module xil_defaultlib.manchester_tx_top_tb
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.OBUF
+Compiling module xil_defaultlib.manchester_top
+Compiling module xil_defaultlib.manchester_top_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot manchester_tx_top_tb_time_impl
+Built simulation snapshot manchester_top_tb_func_impl
 
 ****** Webtalk v2018.3 (64-bit)
   **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
   **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/impl/timing/xsim/xsim.dir/manchester_tx_top_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Wed Nov  4 11:33:12 2020...
-INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+source /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/impl/func/xsim/xsim.dir/manchester_top_tb_func_impl/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Nov  9 10:16:16 2020...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.sim/sim_1/impl/timing/xsim'
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/impl/func/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "manchester_tx_top_tb_time_impl -key {Post-Implementation:sim_1:Timing:manchester_tx_top_tb} -tclbatch {manchester_tx_top_tb.tcl} -log {simulate.log}"
+   with args "manchester_top_tb_func_impl -key {Post-Implementation:sim_1:Functional:manchester_top_tb} -tclbatch {manchester_top_tb.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2018.3
 Time resolution is 1 ps
-source manchester_tx_top_tb.tcl
+source manchester_top_tb.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -1770,130 +401,12 @@ source manchester_tx_top_tb.tcl
 #   }
 # }
 # run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'manchester_tx_top_tb_time_impl' loaded.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'manchester_top_tb_func_impl' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 7898.910 ; gain = 0.000 ; free physical = 475 ; free virtual = 3284
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 7398.695 ; gain = 3.227 ; free physical = 796 ; free virtual = 2960
 run all
-$finish called at time : 18400 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sim_1/new/manchester_tx_top_tb.v" Line 65
+$finish called at time : 16684100 ns : File "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/sim_1/new/manchester_top_tb.v" Line 113
+run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 7398.695 ; gain = 0.000 ; free physical = 971 ; free virtual = 3239
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 close_design
-add_files -fileset constrs_1 -norecurse /home/ukallakuri/hardware_design/designs/xdcs/timing.xdc
-import_files -fileset constrs_1 /home/ukallakuri/hardware_design/designs/xdcs/timing.xdc
-export_ip_user_files -of_objects  [get_files /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/constrs_1/imports/xdcs/timing.xdc] -no_script -reset -force -quiet
-remove_files  -fileset constrs_1 /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/constrs_1/imports/xdcs/timing.xdc
-file delete -force /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/constrs_1/imports/xdcs/timing.xdc
-add_files -fileset constrs_1 -norecurse /home/ukallakuri/hardware_design/designs/xdcs/Nexys-A7.xdc
-import_files -fileset constrs_1 /home/ukallakuri/hardware_design/designs/xdcs/Nexys-A7.xdc
-set_property target_constrs_file /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/constrs_1/imports/xdcs/Nexys-A7.xdc [current_fileset -constrset]
-set_property is_enabled false [get_files  /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/constrs_1/new/tim.xdc]
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Wed Nov  4 16:16:28 2020] Launched synth_1...
-Run output will be captured here: /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Wed Nov  4 16:20:08 2020] Launched synth_1...
-Run output will be captured here: /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.runs/synth_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Wed Nov  4 16:22:22 2020] Launched impl_1...
-Run output will be captured here: /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.runs/impl_1/runme.log
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/manchester_tx_top.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.srcs/sources_1/new/parameters.vh:]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Wed Nov  4 16:29:29 2020] Launched synth_1...
-Run output will be captured here: /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.runs/synth_1/runme.log
-[Wed Nov  4 16:29:29 2020] Launched impl_1...
-Run output will be captured here: /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_tx_behavioural/manchester_tx_behavioural.runs/impl_1/runme.log
-close_project
-open_project /home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.xpr
-Scanning sources...
-Finished scanning sources
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
-set_property target_constrs_file /home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.srcs/constrs_1/new/timing.xdc [current_fileset -constrset]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Thu Nov  5 10:10:11 2020] Launched synth_1...
-Run output will be captured here: /home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.runs/synth_1/runme.log
-[Thu Nov  5 10:10:11 2020] Launched impl_1...
-Run output will be captured here: /home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2018.3
-  **** Build date : Dec  6 2018-23:53:53
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E470A
-set_property PROGRAM.FILE {/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.runs/impl_1/uart_top.bit} [get_hw_devices xc7a100t_0]
-current_hw_device [get_hw_devices xc7a100t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.runs/impl_1/uart_top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-close_hw
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2018.3
-  **** Build date : Dec  6 2018-23:53:53
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E470A
-set_property PROGRAM.FILE {/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.runs/impl_1/uart_top.bit} [get_hw_devices xc7a100t_0]
-current_hw_device [get_hw_devices xc7a100t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.runs/impl_1/uart_top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-close_hw
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2018.3
-  **** Build date : Dec  6 2018-23:53:53
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E470A
-set_property PROGRAM.FILE {/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.runs/impl_1/uart_top.bit} [get_hw_devices xc7a100t_0]
-current_hw_device [get_hw_devices xc7a100t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {/home/ukallakuri/hardware_design/designs/uart/UART_behavioural/UART_behavioural.runs/impl_1/uart_top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-close_hw

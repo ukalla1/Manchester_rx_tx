@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../manchester_rx_behavioural.srcs/sources_1/new" \
+"Manchester_rx_uart_top_tb_time_impl.v" \
+"../../../../../manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_m_tb.v" \
+"../../../../../manchester_rx_behavioural.srcs/sim_1/new/manchester_rx_top_tb.v" \
+"../../../../../manchester_rx_behavioural.srcs/sim_1/new/Manchester_rx_uart_top_tb.v" \
+
+# Do not sort compile order
+nosort

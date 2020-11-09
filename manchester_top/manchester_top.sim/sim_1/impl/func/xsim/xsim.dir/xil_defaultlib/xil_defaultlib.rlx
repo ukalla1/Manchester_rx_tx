@@ -1,0 +1,7 @@
+0.6
+2018.3
+Dec  6 2018
+23:39:36
+/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.sim/sim_1/impl/func/xsim/manchester_top_tb_func_impl.v,1604934971,verilog,,/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/sim_1/new/manchester_top_tb.v,,Manchester_rx_uart_top;glbl;manchester_rx_m;manchester_rx_top;manchester_top;manchester_tx_m;manchester_tx_top;ram_dp__sim_par;ram_dp__sim_par__parameterized0;uart_tx_wrapper;uart_txm_ex,,,../../../../../manchester_top.srcs/sources_1/new,,,,,
+/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/sim_1/new/manchester_top_tb.v,1604631045,verilog,,,/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/sources_1/new/parameters.vh,manchester_top_tb,,,../../../../../manchester_top.srcs/sources_1/new,,,,,
+/home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/sources_1/new/parameters.vh,1604621188,verilog,,,,,,,,,,,,
