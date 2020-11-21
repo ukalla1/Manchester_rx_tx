@@ -1130,3 +1130,38 @@ dismissDialog("Confirm Close"); // A (cp)
 // TclEventType: DESIGN_CLOSE
 selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aA, cp)
 dismissDialog("Close"); // bx (cp)
+// Elapsed time: 396 seconds
+maximizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // ax (aI, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 6); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 7); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, manchester_top (manchester_top.v), TXM : manchester_tx_top (manchester_tx_top.v)]", 3); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, manchester_top (manchester_top.v), TXM : manchester_tx_top (manchester_tx_top.v)]", 3, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, manchester_top (manchester_top.v), TXM : manchester_tx_top (manchester_tx_top.v), ram : ram_dp__sim_par (ram_dp__sim_par.v)]", 4, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, manchester_top (manchester_top.v), TXM : manchester_tx_top (manchester_tx_top.v), tx_m : manchester_tx_m (manchester_tx_m.v)]", 5, false); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, manchester_top (manchester_top.v), RXM : Manchester_rx_uart_top (Manchester_rx_uart_top.v)]", 6); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, manchester_top (manchester_top.v), RXM : Manchester_rx_uart_top (Manchester_rx_uart_top.v), rx_top : manchester_rx_top (manchester_rx_top.v)]", 7, true); // B (D, cp) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, manchester_top (manchester_top.v), RXM : Manchester_rx_uart_top (Manchester_rx_uart_top.v), rx_top : manchester_rx_top (manchester_rx_top.v)]", 7); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, manchester_top (manchester_top.v), RXM : Manchester_rx_uart_top (Manchester_rx_uart_top.v), rx_top : manchester_rx_top (manchester_rx_top.v), ram : ram_dp__sim_par (ram_dp__sim_par.v)]", 8, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, manchester_top (manchester_top.v), RXM : Manchester_rx_uart_top (Manchester_rx_uart_top.v), rx_top : manchester_rx_top (manchester_rx_top.v), rxm : manchester_rx_m (manchester_rx_m.v)]", 9, false); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, manchester_top (manchester_top.v), RXM : Manchester_rx_uart_top (Manchester_rx_uart_top.v), rx_top : manchester_rx_top (manchester_rx_top.v)]", 7); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, manchester_top (manchester_top.v), RXM : Manchester_rx_uart_top (Manchester_rx_uart_top.v), uart_tx : uart_tx_wrapper (uart_tx_wrapper.v)]", 8); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, manchester_top (manchester_top.v), RXM : Manchester_rx_uart_top (Manchester_rx_uart_top.v), uart_tx : uart_tx_wrapper (uart_tx_wrapper.v)]", 8); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, manchester_top (manchester_top.v), RXM : Manchester_rx_uart_top (Manchester_rx_uart_top.v), rx_top : manchester_rx_top (manchester_rx_top.v)]", 7); // B (D, cp)
+// Elapsed time: 21 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, manchester_top (manchester_top.v), RXM : Manchester_rx_uart_top (Manchester_rx_uart_top.v), uart_tx : uart_tx_wrapper (uart_tx_wrapper.v)]", 10); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, manchester_top (manchester_top.v), RXM : Manchester_rx_uart_top (Manchester_rx_uart_top.v), uart_tx : uart_tx_wrapper (uart_tx_wrapper.v), tx : uart_txm_ex (uart_txm_ex.v)]", 11, false); // B (D, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,028 MB. GUI used memory: 78 MB. Current time: 11/9/20, 10:49:42 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,017 MB. GUI used memory: 75 MB. Current time: 11/9/20, 11:19:42 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,014 MB. GUI used memory: 75 MB. Current time: 11/9/20, 11:49:42 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,014 MB. GUI used memory: 74 MB. Current time: 11/9/20, 12:19:42 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,014 MB. GUI used memory: 74 MB. Current time: 11/9/20, 12:49:42 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,014 MB. GUI used memory: 74 MB. Current time: 11/9/20, 1:19:42 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,014 MB. GUI used memory: 74 MB. Current time: 11/9/20, 1:49:42 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,014 MB. GUI used memory: 74 MB. Current time: 11/9/20, 2:19:43 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,014 MB. GUI used memory: 74 MB. Current time: 11/9/20, 2:49:43 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,014 MB. GUI used memory: 74 MB. Current time: 11/9/20, 3:19:43 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,014 MB. GUI used memory: 74 MB. Current time: 11/9/20, 3:49:43 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,014 MB. GUI used memory: 74 MB. Current time: 11/9/20, 4:19:43 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,014 MB. GUI used memory: 74 MB. Current time: 11/9/20, 4:49:43 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,014 MB. GUI used memory: 74 MB. Current time: 11/9/20, 5:19:43 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,015 MB. GUI used memory: 74 MB. Current time: 11/9/20, 5:49:43 PM EST

@@ -21,8 +21,10 @@
 
 `include "parameters.vh"
 
-module manchester_top_tb(
+module manchester_top_tb #(
 //    inout serial_data
+    parameter output_path = "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/output.txt",
+    parameter test_path = "/home/ukallakuri/hardware_design/designs/manchester_tx_rx/tmp.txt"
     );
     
     reg clk100M = 1'b0;
@@ -38,8 +40,9 @@ module manchester_top_tb(
     wire tx_ready;
     
     integer period20M = 50, period100M = 10;
-    integer i=0,j=0;
+    integer i=0,j=0, f_o, f_t, k=0, l=0;
     reg [7:0]data = 0;
+    reg [7:0] test_reg = 0;
     
     manchester_top uut(
         .clk100M(clk100M),
@@ -66,6 +69,11 @@ module manchester_top_tb(
     end
     
     initial begin
+        f_o = $fopen(output_path,"w");
+        f_t = $fopen(test_path,"w");
+    end
+    
+    initial begin
         rst = 1'b1;
         
         #(2*period20M);
@@ -74,44 +82,106 @@ module manchester_top_tb(
         
         #(2*period20M);
         
-        tx_on = 1'b1;
+        fork
+            tx_opn;
+            
+            rx_opn;
+        join
         
-        #(`DATAWIDTH*(2*period20M));
+        #(100*period100M);
+        uart_tx_on = 0;
+        #(200*period100M);  
+        uart_tx_on = 1;
         
-        #((`RAM_DEPTH+1)*(`DATAWIDTH*(2*period20M)));
+        fork
+            op_write;
+            
+            test_write;
+        join
+//        uart_tx_on = 0;      
+        #(10*period100M);
         
-        tx_on = 1'b0;
+//        uart_tx_on = 0;
+        $fclose(f_o);
+        $fclose(f_t);
         
-        #(20*period20M);
+        #(1000*period100M);
+        $finish;
         
-        data = 8'b11001100;
-        for(j=0; j < 8 ; j=j+1)begin
-            serial_data_in = data[j]^1;
-            #(5 * period100M);
-            serial_data_in = data[j]^0;
-            #(5 * period100M);
+    end
+    
+    task tx_opn;
+        begin
+            tx_on = 1'b1;
+            #(`DATAWIDTH*(2*period20M));
+            #((`RAM_DEPTH+1)*(`DATAWIDTH*(2*period20M)));
+            tx_on = 1'b0;
+            #(20*period20M);
         end
-        
-        for ( i=0 ; i < `RAM_DEPTH-1 ; i=i+1)begin
-            data = i;
+    endtask
+    
+    task rx_opn;
+        begin
+            data = 8'b1100_1100;
+            #(period20M);
             for(j=0; j < 8 ; j=j+1)begin
                 serial_data_in = data[j]^1;
                 #(5 * period100M);
                 serial_data_in = data[j]^0;
-               #(5 * period100M);
+                #(5 * period100M);
             end
+            
+            for ( i=0 ; i < `RAM_DEPTH-1 ; i=i+1)begin
+                data = i;
+                for(j=0; j < 8 ; j=j+1)begin
+                    serial_data_in = data[j]^1;
+                    #(5 * period100M);
+                    serial_data_in = data[j]^0;
+                   #(5 * period100M);
+                end
+            end
+            serial_data_in = 1'b0;
         end
-        
-        #(100*period100M);
-        uart_tx_on = 0;
-        #(20*period100M);  
-        uart_tx_on = 1;
-        #(((`SAMPLECOUNTMAX * 10)*`RAM_DEPTH)*(period100M*2));
-        uart_tx_on = 0;      
-        #(10*period100M);
-        
-        $finish;
-        
-    end
+    endtask
+    
+    task op_write;
+        begin
+            #(4*period100M);
+            for(i=0; i<`RAM_DEPTH; i=i+1) begin
+                for(j=0; j<10; j=j+1) begin
+                    if(i==`RAM_DEPTH-1) begin
+                        uart_tx_on = 0;
+                    end
+                    if(j==0) begin
+                        #((`SAMPLECOUNTMAX) * period100M);
+                    end
+                    else if(j==9) begin
+                        #((`SAMPLECOUNTMAX) * period100M);
+                    end
+                    else begin
+                        #((`SAMPLECOUNTMAX) * period100M);
+                        test_reg = {uart_serial_out, test_reg[7:1]};
+                    end
+                end
+                $fwrite(f_o,"%d\n", test_reg);
+            end
+//            #((`DATAWIDTH+1+1)*(`SAMPLECOUNTMAX * period100M));
+        end
+    endtask
+    
+    task test_write;
+        begin
+            $fwrite(f_t, "%d\n", `PREAMBLE);
+//            #(period100M);
+            for(k=0; k<`RAM_DEPTH-1; k=k+1) begin
+                $fwrite(f_t, "%d\n", l);
+                l= l+1;
+                if(l == 256) begin
+                    l=0;
+                end
+            end
+//            #(period100M);
+        end
+    endtask
     
 endmodule

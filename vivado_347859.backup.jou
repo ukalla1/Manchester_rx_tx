@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Nov  5 21:42:36 2020
+# Process ID: 347859
+# Current directory: /home/ukallakuri/hardware_design/designs/manchester_tx_rx
+# Command line: vivado
+# Log file: /home/ukallakuri/hardware_design/designs/manchester_tx_rx/vivado.log
+# Journal file: /home/ukallakuri/hardware_design/designs/manchester_tx_rx/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+source manchester_top_tb.tcl
+relaunch_sim
+run all
+close_sim
+launch_simulation
+source manchester_top_tb.tcl
+run all
+close_sim
+open_run synth_1 -name synth_1
+create_clock -period 10.000 -name clk100M -waveform {0.000 5.000} [get_ports clk100M]
+create_clock -period 50.000 -name clk100M -waveform {0.000 25.000} [list [get_ports clk20M] ]
+file mkdir /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/constrs_1/new
+close [ open /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/constrs_1/new/tim.xdc w ]
+add_files -fileset constrs_1 /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/constrs_1/new/tim.xdc
+set_property target_constrs_file /home/ukallakuri/hardware_design/designs/manchester_tx_rx/manchester_top/manchester_top.srcs/constrs_1/new/tim.xdc [current_fileset -constrset]
+save_constraints -force
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+open_run impl_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+launch_simulation -mode post-implementation -type functional
+source manchester_top_tb.tcl
+run all
+close_sim
+close_design

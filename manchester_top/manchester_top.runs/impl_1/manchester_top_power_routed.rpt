@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Mon Nov  9 10:13:12 2020
+| Date             : Fri Nov 20 12:06:37 2020
 | Host             : ukallakuri-Lenovo-YOGA-910-13IKB running 64-bit Ubuntu 20.04.1 LTS
 | Command          : report_power -file manchester_top_power_routed.rpt -pb manchester_top_power_summary_routed.pb -rpx manchester_top_power_routed.rpx
 | Design           : manchester_top
@@ -52,14 +52,14 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.001 |        4 |       --- |             --- |
-| Slice Logic              |    <0.001 |      278 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |       91 |     63400 |            0.14 |
-|   Register               |    <0.001 |      114 |    126800 |            0.09 |
+| Clocks                   |    <0.001 |        4 |       --- |             --- |
+| Slice Logic              |    <0.001 |      270 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |       92 |     63400 |            0.15 |
+|   Register               |    <0.001 |      107 |    126800 |            0.08 |
 |   CARRY4                 |    <0.001 |        4 |     15850 |            0.03 |
 |   LUT as Distributed RAM |    <0.001 |       16 |     19000 |            0.08 |
 |   Others                 |     0.000 |       11 |       --- |             --- |
-| Signals                  |    <0.001 |      174 |       --- |             --- |
+| Signals                  |    <0.001 |      173 |       --- |             --- |
 | I/O                      |    <0.001 |       10 |       210 |            4.76 |
 | Static Power             |     0.091 |          |           |                 |
 | Total                    |     0.093 |          |           |                 |

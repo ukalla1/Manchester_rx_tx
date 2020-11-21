@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="manchester_top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="manchester_top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="10701311000fs"></ZoomStartTime>
+      <ZoomEndTime time="18021311001fs"></ZoomEndTime>
+      <Cursor1Time time="13191311000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="126"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="24" />
+   <wvobject type="logic" fp_name="/manchester_top_tb/clk100M">
+      <obj_property name="ElementShortName">clk100M</obj_property>
+      <obj_property name="ObjectShortName">clk100M</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/manchester_top_tb/clk20M">
+      <obj_property name="ElementShortName">clk20M</obj_property>
+      <obj_property name="ObjectShortName">clk20M</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/manchester_top_tb/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/manchester_top_tb/tx_on">
+      <obj_property name="ElementShortName">tx_on</obj_property>
+      <obj_property name="ObjectShortName">tx_on</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/manchester_top_tb/uart_tx_on">
+      <obj_property name="ElementShortName">uart_tx_on</obj_property>
+      <obj_property name="ObjectShortName">uart_tx_on</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/manchester_top_tb/serial_data_in">
+      <obj_property name="ElementShortName">serial_data_in</obj_property>
+      <obj_property name="ObjectShortName">serial_data_in</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/manchester_top_tb/serial_data_out">
+      <obj_property name="ElementShortName">serial_data_out</obj_property>
+      <obj_property name="ObjectShortName">serial_data_out</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/manchester_top_tb/rx_ready">
+      <obj_property name="ElementShortName">rx_ready</obj_property>
+      <obj_property name="ObjectShortName">rx_ready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/manchester_top_tb/tx_ready">
+      <obj_property name="ElementShortName">tx_ready</obj_property>
+      <obj_property name="ObjectShortName">tx_ready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/manchester_top_tb/uart_serial_out">
+      <obj_property name="ElementShortName">uart_serial_out</obj_property>
+      <obj_property name="ObjectShortName">uart_serial_out</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/manchester_top_tb/uut/RXM/uart_tx/tx/tx_data_load">
+      <obj_property name="ElementShortName">tx_data_load</obj_property>
+      <obj_property name="ObjectShortName">tx_data_load</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/manchester_top_tb/uut/RXM/uart_tx/tx/state">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/manchester_top_tb/uut/RXM/uart_tx/tx/bit_count">
+      <obj_property name="ElementShortName">bit_count[2:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_count[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/manchester_top_tb/uut/RXM/uart_tx/tx/sample_count">
+      <obj_property name="ElementShortName">sample_count[13:0]</obj_property>
+      <obj_property name="ObjectShortName">sample_count[13:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/manchester_top_tb/i">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/manchester_top_tb/j">
+      <obj_property name="ElementShortName">j[31:0]</obj_property>
+      <obj_property name="ObjectShortName">j[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/manchester_top_tb/test_reg">
+      <obj_property name="ElementShortName">test_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">test_reg[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/manchester_top_tb/uut/RXM/tx_ready">
+      <obj_property name="ElementShortName">tx_ready</obj_property>
+      <obj_property name="ObjectShortName">tx_ready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/manchester_top_tb/uut/RXM/tx_parallel_data">
+      <obj_property name="ElementShortName">tx_parallel_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_parallel_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/manchester_top_tb/uut/RXM/enb">
+      <obj_property name="ElementShortName">enb</obj_property>
+      <obj_property name="ObjectShortName">enb</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/manchester_top_tb/uut/RXM/ram_addrb">
+      <obj_property name="ElementShortName">ram_addrb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_addrb[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/manchester_top_tb/uut/RXM/rx_top/ram_addra">
+      <obj_property name="ElementShortName">ram_addra[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_addra[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/manchester_top_tb/uut/RXM/rx_top/parallel_dout_rx">
+      <obj_property name="ElementShortName">parallel_dout_rx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">parallel_dout_rx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/manchester_top_tb/uut/RXM/rx_top/data_valid">
+      <obj_property name="ElementShortName">data_valid</obj_property>
+      <obj_property name="ObjectShortName">data_valid</obj_property>
+   </wvobject>
+</wave_config>

@@ -22,17 +22,17 @@
 `include "parameters.vh"
 
 module manchester_top(
-    input clk100M,
-    input clk20M,
-    input rst,
-    input tx_on,
-    input uart_tx_on,
-    output uart_serial_out,
-    output rx_ready,
-    output tx_ready,
+    input clk100M,              //Receiver clock
+    input clk20M,               //Transmitter clock
+    input rst,                  //Global reset
+    input tx_on,                //Top level transmitter on signal
+    input uart_tx_on,           //UART transmitter control signal
+    output uart_serial_out,     //Serial output from the UART
+    output rx_ready,            //Receiver ready soft signal
+    output tx_ready,            //Transmitter ready soft signal
 //    inout serial_data
-    input serial_data_in,
-    output serial_data_out
+    input serial_data_in,       //Data to the receiver
+    output serial_data_out      //Data from the transmitter
     );
     
 //    wire manchester_tx_serial_out;
@@ -41,6 +41,8 @@ module manchester_top(
     
 //    assign serial_data = (tx_on) ? manchester_tx_serial_out : 1'bz;
     
+    
+    //Instantiating the transmitter module
     manchester_tx_top TXM(
         .clk(clk20M),
         .rst(rst),
@@ -49,6 +51,7 @@ module manchester_top(
         .manch_out(serial_data_out)
     );
     
+    //Instantiating the receiver module
     Manchester_rx_uart_top RXM(
         .clk(clk100M),
         .rst(rst),

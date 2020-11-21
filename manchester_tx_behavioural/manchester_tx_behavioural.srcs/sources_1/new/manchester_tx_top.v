@@ -22,14 +22,14 @@
 `include "parameters.vh"
 
 module manchester_tx_top(
-    input clk,
-    input rst,
-    input tx_on,
-    output reg tx_done,
-    output manch_out
+    input clk,              //input clk
+    input rst,              //global reset signal
+    input tx_on,            //input trasnmitter on signal
+    output reg tx_done,     //transmission done soft signal
+    output manch_out        //the manchester encoded output
     );
     
-    localparam RAM_ADDRSWIDTH = clogb2(`RAM_DEPTH-1);
+    localparam RAM_ADDRSWIDTH = clogb2(`RAM_DEPTH-1);  //Memory address width computation (function call)
     
     reg tx_on_internal;
     
@@ -45,6 +45,7 @@ module manchester_tx_top(
     
     localparam idle = 3'b000, tx_preamble = 3'b001, mem_read = 3'b010, tx_data = 3'b011, stop = 3'b100;
     
+    //The dual port ram that the transmitter reads from
     ram_dp__sim_par #(
         .DATA_WIDTH(`DATAWIDTH),
         .RAM_DEPTH(`RAM_DEPTH),
@@ -60,6 +61,7 @@ module manchester_tx_top(
         .doutb(mem_out)
     );
     
+    ////Instantiating the transmitter module
     manchester_tx_m tx_m(
         .clk(clk),
         .rst(rst),

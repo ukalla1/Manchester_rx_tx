@@ -42,6 +42,8 @@ module manchester_tx_m (
     
     assign tx_ready = tx_ready_internal;
     
+    //Actual logic computation
+    //If tx_on, and the number of bits transmitter are less than 8, transmit the manchester encoded output of the input (It takes 2 clock cycles)
     always @(posedge clk) begin
         if(rst) begin
             tx_out <= 1'b0;
@@ -59,24 +61,24 @@ module manchester_tx_m (
                     if(sample_cnt == 1'b0) begin
                         bit_cnt <= bit_cnt;
                         sample_cnt <= 1'b1;
-                        tx_out <= parallel_din[bit_cnt] ^ 1'b1; 
+                        tx_out <= parallel_din[bit_cnt] ^ 1'b1; //Manchester output computation
                     end
                     else begin
                         bit_cnt <= bit_cnt + 1'b1;
                         sample_cnt <= 1'b0;
-                        tx_out <= parallel_din[bit_cnt] ^ 1'b0;
+                        tx_out <= parallel_din[bit_cnt] ^ 1'b0; //Manchester output computation
                     end
                 end
                 else if(bit_cnt == (`DATAWIDTH-1)) begin
                     if(sample_cnt == 1'b0) begin
                         bit_cnt <= bit_cnt;
                         sample_cnt <= 1'b1;
-                        tx_out <= parallel_din[bit_cnt] ^ 1'b1; 
+                        tx_out <= parallel_din[bit_cnt] ^ 1'b1; //Manchester output computation
                     end
                     else begin
                         bit_cnt <= {3{1'b0}};
                         sample_cnt <= 1'b0;
-                        tx_out <= parallel_din[bit_cnt] ^ 1'b0;
+                        tx_out <= parallel_din[bit_cnt] ^ 1'b0; //Manchester output computation
                     end
                 end
                 else begin
